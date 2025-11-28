@@ -1,6 +1,6 @@
 ## Elastic Block Storage   
 
-## 🟦 What is Amazon EBS
+##  What is Amazon EBS
 Amazon Elastic Block Store (EBS) provides persistent block storage volumes for EC2 instances. Unlike Instance Store, EBS retains data even if the EC2 instance stops or restarts. Think of EBS as a highly durable cloud SSD/HDD that you can attach, detach, resize, back up, and encrypt.
 
 ##  Key Characteristics of EBS
@@ -12,7 +12,7 @@ Amazon Elastic Block Store (EBS) provides persistent block storage volumes for E
 - **Flexible**: Resize, change type, or tune performance anytime.
 
 ---
-# 🟦 EBS Volume Types 
+#  EBS Volume Types 
 EBS volumes are divided into SSD-based and HDD-based categories.
 
 ##  1. SSD Volumes (Optimized for IOPS)
@@ -74,7 +74,7 @@ Used for workloads requiring sequential access.
 - Used only for backward compatibility.
 
 ---
-# 🟦  EBS Points 
+#   EBS Points 
 - EBS is AZ-scoped → you cannot attach a volume to EC2 in another AZ.
 - EBS volumes can be dynamically reconfigured (change type, expand size).
 - EBS uses **network-attached storage**, not physically local to EC2.
@@ -105,7 +105,7 @@ AWS Data Lifecycle Manager (DLM) allows you to automate:
 - Scheduled backups
 
 ---
-# 🟦 EBS Encryption 
+#  EBS Encryption 
 AWS encrypts:
 - Data at rest (stored on disk)
 - Data in transit (between EC2 ↔ EBS)
@@ -124,16 +124,16 @@ AWS encrypts:
 - Easy rotation of keys
 
 ---
-# 🟦 Partitioning & File System 
+#  Partitioning & File System 
 When We attach a new EBS volume, it is raw and unformatted.
 
-## 🔹 Step 1: View volumes
+##  Step 1: View volumes
 ```
 lsblk
 
 ```
 
-## 🔹 Step 2: Partition the disk
+##  Step 2: Partition the disk
 ```
 sudo fdisk /dev/xvdf ,/dev/nvme1n1
           - n-create new partitions
@@ -144,25 +144,25 @@ sudo fdisk /dev/xvdf ,/dev/nvme1n1
 
 ```
 
-## 🔹 Step 3: Format with filesystem
+##  Step 3: Format with filesystem
 ```
 sudo mkfs -t ext4 /dev/xvdf1 , /dev/nvme1n1
 
 ```
 
-## 🔹 Step 4: Mount the volume
+##  Step 4: Mount the volume
 ```
 sudo mkdir /data
 sudo mount /dev/xvdf1 /data , /dev/nvme1n1 /data
 
 ```
 
-## 🔹 Step 5: Verify
+##  Step 5: Verify
 ```
 df -h
 ```
 
-## 🔹 Step 6: Permanent Mount
+##  Step 6: Permanent Mount
 ```
 To ensure the partition mounts automatically after a reboot, update the `/etc/fstab` file.
 
@@ -182,7 +182,7 @@ To ensure the partition mounts automatically after a reboot, update the `/etc/fs
                /dev/xvdf1 /data ext4 defaults,nofail 0 2
               /dev/nvme1n1 /data ext4 defaults,nofail 0 2
 ```
-## 🔹 Step 7: Unmounting  EBS Volume (`umount`)
+##  Step 7: Unmounting  EBS Volume (`umount`)
 ```
 sudo umount  /dev/xvdf1 /data  
 sudo umount /dev/nvme1n1 /data
