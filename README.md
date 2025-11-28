@@ -111,7 +111,7 @@ Acts like a “lock” installed on the server.
 
 You use this to unlock and log in securely.
 
-> ⚠️ Never share private key.
+>  Never share private key.
 
 ---
 
@@ -207,26 +207,6 @@ ssh -i mykey.pem ec2-user@<public-ip>
 * Good for beginners
 
 ---
-
-# 🟦 Extra Information Added for Better Understanding
-
-### 📌 Choosing Instance Size
-
-* **t2.micro** is free tier
-* Use **m5** or **m6g** for general workloads
-* Use **r5** for memory-heavy workloads
-
-### 📌 Storage Types
-
-* **EBS (Elastic Block Store)** → persistent disk
-* **Instance Store** → temporary high-speed storage
-
-### 📌 Networking Concepts
-
-* ENI (Elastic Network Interface)
-* Public vs Private IP
-* Elastic IP (static public IP)
-
 ### 📌 Common Ports
 
 | Purpose | Port |
@@ -236,5 +216,46 @@ ssh -i mykey.pem ec2-user@<public-ip>
 | HTTPS   | 443  |
 | RDP     | 3389 |
 
+
+## 🟦 Amazon Machine Image (AMI)
+
+An AMI defines the template used to launch EC2 instances. It acts like a snapshot of your machine that can be reused.
+
+###  AMI Contains:
+
+* Root OS image
+* Software packages
+* Boot instructions
+* Block device mapping
+* Permissions for launching
+
+###  Types of AMIs
+
+* AWS Provided AMIs
+* Marketplace AMIs
+* Custom AMIs (created from your running server)
+* Community AMIs
+
+## 🟦 Status Checks in EC2
+
+AWS runs automatic health checks to ensure your instance is working properly.
+
+### **1. System Status Check**
+
+Checks AWS infrastructure (network outage, power failure, physical host health).
+
+### **2. Instance Status Check**
+
+Checks your instance-level issues:
+
+* Boot errors
+* OS corruption
+* Network misconfiguration
+
+### **3. EBS Volume Status Check**
+
+Checks I/O performance and health of attached volumes.
+
 ---
+
 
