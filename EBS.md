@@ -1,4 +1,4 @@
-## Elastic Block Storage   
+# Elastic Block Storage   
 
 ##  What is Amazon EBS
 Amazon Elastic Block Store (EBS) provides persistent block storage volumes for EC2 instances. Unlike Instance Store, EBS retains data even if the EC2 instance stops or restarts. Think of EBS as a highly durable cloud SSD/HDD that you can attach, detach, resize, back up, and encrypt.
