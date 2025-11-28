@@ -1,10 +1,10 @@
 
 
- 🚀 Amazon EC2 
+  Amazon EC2 
 
 ---
 
-# 🟦 Elastic Compute Cloud (EC2)
+#  Elastic Compute Cloud (EC2)
 
 Amazon EC2 (Elastic Compute Cloud) is a web service that allows you to run virtual servers in the cloud. It provides scalable, secure, and cost‑efficient compute capacity, allowing you to deploy applications without buying physical hardware.
 
@@ -20,7 +20,7 @@ An **EC2 instance** is simply a virtual machine (VM) that runs on AWS. You can s
 
 ---
 
-# 🟦 Amazon Machine Image (AMI)
+#  Amazon Machine Image (AMI)
 
 An **Amazon Machine Image (AMI)** is a pre-configured template used to create EC2 instances.
 
@@ -40,11 +40,11 @@ An **Amazon Machine Image (AMI)** is a pre-configured template used to create EC
 
 ---
 
-# 🟦 Types of EC2 Instances
+#  Types of EC2 Instances
 
 AWS categorizes EC2 instances based on CPU, memory, storage, and networking needs.
 
-## 1️⃣ General Purpose Instances
+## 1️ General Purpose Instances
 
 Balanced compute, memory, and storage.
 
@@ -54,7 +54,7 @@ Balanced compute, memory, and storage.
 
 ---
 
-## 2️⃣ Compute Optimized Instances
+## 2️ Compute Optimized Instances
 
 Designed for high‑performance CPU operations.
 
@@ -64,7 +64,7 @@ Designed for high‑performance CPU operations.
 
 ---
 
-## 3️⃣ Memory Optimized Instances
+## 3️ Memory Optimized Instances
 
 High RAM relative to CPU.
 
@@ -74,7 +74,7 @@ High RAM relative to CPU.
 
 ---
 
-## 4️⃣ Storage Optimized Instances
+## 4️ Storage Optimized Instances
 
 Fast I/O performance + large storage capacity.
 
@@ -84,7 +84,7 @@ Fast I/O performance + large storage capacity.
 
 ---
 
-## 5️⃣ Accelerated Computing Instances
+## 5️ Accelerated Computing Instances
 
 Use specialized hardware like GPUs or FPGAs.
 
@@ -94,7 +94,7 @@ Use specialized hardware like GPUs or FPGAs.
 
 ---
 
-# 🟦 Key Pair (SSH Keys)
+#  Key Pair (SSH Keys)
 
 A **key pair** is used to securely connect to EC2 instances without a password.
 
@@ -115,7 +115,7 @@ You use this to unlock and log in securely.
 
 ---
 
-# 🟦 Security Group
+#  Security Group
 
 A **security group** acts as a virtual firewall for your instance.
 
@@ -133,7 +133,7 @@ Security groups help ensure only trusted sources can connect.
 
 ---
 
-# 🟦 EC2 Instance States
+#  EC2 Instance States
 
 | State             | Meaning                                             |
 | ----------------- | --------------------------------------------------- |
@@ -148,17 +148,17 @@ Security groups help ensure only trusted sources can connect.
 
 ---
 
-# 🟦 EC2 Pricing Models
+#  EC2 Pricing Models
 
 AWS provides various cost options depending on flexibility and usage.
 
-## 1️⃣ On‑Demand
+## 1️ On‑Demand
 
 * Pay per hour/second
 * No commitment
 * Good for testing or unpredictable workloads
 
-## 2️⃣ Reserved Instances
+## 2️ Reserved Instances
 
 * 1 or 3‑year commitment
 * Up to **75% cheaper** than On‑Demand
@@ -168,28 +168,28 @@ AWS provides various cost options depending on flexibility and usage.
   * Partial upfront
   * No upfront
 
-## 3️⃣ Savings Plans
+## 3️ Savings Plans
 
 * Commit to a fixed $/hour usage
 * More flexible than Reserved Instances
 * Works across regions & instance families
 
-## 4️⃣ Spot Instances
+## 4️ Spot Instances
 
 * Use unused AWS capacity at **up to 90% discount**
 * Can be interrupted anytime
 * Best for flexible, fault‑tolerant workloads
 
-## 5️⃣ Dedicated Hosts
+## 5️ Dedicated Hosts
 
 * A full physical EC2 server dedicated to your account
 * Useful for license‑specific workloads (Windows, SQL)
 
 ---
 
-# 🟦 Remote Access: SSH vs RDP
+#  Remote Access: SSH vs RDP
 
-## 🔵 SSH (Linux)
+##  SSH (Linux)
 
 * Uses **port 22**
 * Command‑line interface
@@ -200,14 +200,14 @@ AWS provides various cost options depending on flexibility and usage.
 ssh -i mykey.pem ec2-user@<public-ip>
 ```
 
-## 🔵 RDP (Windows)
+##  RDP (Windows)
 
 * Uses **port 3389**
 * Full graphical interface (GUI)
 * Good for beginners
 
 ---
-### 📌 Common Ports
+###  Common Ports
 
 | Purpose | Port |
 | ------- | ---- |
@@ -217,7 +217,7 @@ ssh -i mykey.pem ec2-user@<public-ip>
 | RDP     | 3389 |
 
 
-## 🟦 Amazon Machine Image (AMI)
+##  Amazon Machine Image (AMI)
 
 An AMI defines the template used to launch EC2 instances. It acts like a snapshot of your machine that can be reused.
 
@@ -236,7 +236,7 @@ An AMI defines the template used to launch EC2 instances. It acts like a snapsho
 * Custom AMIs (created from your running server)
 * Community AMIs
 
-## 🟦 Status Checks in EC2
+##  Status Checks in EC2
 
 AWS runs automatic health checks to ensure your instance is working properly.
 
