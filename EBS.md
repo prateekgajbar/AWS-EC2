@@ -124,6 +124,33 @@ AWS encrypts:
 - Easy rotation of keys
 
 ---
+
+
+## 1. Creating an EBS Volume (GUI)
+
+1. **Login to AWS Console:** [https://aws.amazon.com/console/](https://aws.amazon.com/console/)  
+2. **Navigate to Elastic Block Store → Volumes**.  
+3. Click **Create Volume**.  
+4. Configure the following:
+   - **Volume Type:** General Purpose SSD (gp3)  
+   - **Size:** Enter required GB (e.g., 10 GB)  
+   - **Availability Zone:** Select the same AZ as your EC2 instance  
+5. Click **Create Volume**.  
+6. The new volume will appear in the volume list.
+
+---
+
+## 2. Attaching an EBS Volume to an EC2 Instance (GUI)
+
+1. Select the volume you created.  
+2. Click **Actions → Attach Volume**.  
+3. Choose the **EC2 instance** to attach the volume to.  
+4. Note the **device name** (e.g., `/dev/nvme1n1`,`/dev/xvdf`)  
+5. Click **Attach**.  
+6. The volume is now attached and ready for mounting on the EC2 instance.
+
+
+---
 #  Partitioning & File System 
 When We attach a new EBS volume, it is raw and unformatted.
 
